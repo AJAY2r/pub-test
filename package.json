@@ -1,0 +1,168 @@
+{
+  "_args": [
+    [
+      "react-treebeard@^1.1.4",
+      "/Users/kumarbindal/Desktop/sourcecode/web-app"
+    ],
+    [
+      {
+        "raw": "react-treebeard@git://github.com/AJAY2r/React-treeview.git",
+        "scope": null,
+        "escapedName": "react-treebeard",
+        "name": "react-treebeard",
+        "rawSpec": "git://github.com/AJAY2r/React-treeview.git",
+        "spec": "git://github.com/AJAY2r/React-treeview.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:AJAY2r/React-treeview.git",
+          "sshUrl": "git+ssh://git@github.com/AJAY2r/React-treeview.git",
+          "httpsUrl": "git+https://github.com/AJAY2r/React-treeview.git",
+          "gitUrl": "git://github.com/AJAY2r/React-treeview.git",
+          "shortcut": "github:AJAY2r/React-treeview",
+          "directUrl": "https://raw.githubusercontent.com/AJAY2r/React-treeview/master/package.json"
+        }
+      },
+      "/home/crosscode/CrossCode/front-end-app"
+    ]
+  ],
+  "_from": "git://github.com/AJAY2r/React-treeview.git",
+  "_id": "react-treebeard@1.1.4",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/react-treebeard",
+  "_nodeVersion": "6.3.1",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/react-treebeard-1.1.4.tgz_1473679231369_0.1555206379853189"
+  },
+  "_npmUser": {
+    "email": "alx.curtis@gmail.com",
+    "name": "alexcurtis"
+  },
+  "_npmVersion": "3.10.3",
+  "_phantomChildren": {
+    "core-js": "1.2.7"
+  },
+  "_requested": {
+    "raw": "react-treebeard@git://github.com/AJAY2r/React-treeview.git",
+    "scope": null,
+    "escapedName": "react-treebeard",
+    "name": "react-treebeard",
+    "rawSpec": "git://github.com/AJAY2r/React-treeview.git",
+    "spec": "git://github.com/AJAY2r/React-treeview.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:AJAY2r/React-treeview.git",
+      "sshUrl": "git+ssh://git@github.com/AJAY2r/React-treeview.git",
+      "httpsUrl": "git+https://github.com/AJAY2r/React-treeview.git",
+      "gitUrl": "git://github.com/AJAY2r/React-treeview.git",
+      "shortcut": "github:AJAY2r/React-treeview",
+      "directUrl": "https://raw.githubusercontent.com/AJAY2r/React-treeview/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git://github.com/AJAY2r/React-treeview.git#566fcbe1f0a91ddda04dc4676f33377dbd54b68c",
+  "_shasum": "5588686726fd331b837a44f7c4e2a976088524dd",
+  "_shrinkwrap": null,
+  "_spec": "react-treebeard@git://github.com/AJAY2r/React-treeview.git",
+  "_where": "/home/crosscode/CrossCode/front-end-app",
+  "author": {
+    "name": "Alex Curtis"
+  },
+  "bugs": {
+    "url": "https://github.com/alexcurtis/react-treebeard/issues"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.8.29",
+    "deep-equal": "^1.0.1",
+    "radium": "^0.18.0",
+    "shallowequal": "^0.2.2",
+    "velocity-react": "^1.1.2"
+  },
+  "description": "React Tree View Component",
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-core": "^5.8.29",
+    "babel-eslint": "^4.1.3",
+    "babel-loader": "^5.3.3",
+    "chai": "^3.4.0",
+    "del": "^2.0.2",
+    "eslint": "^1.8.0",
+    "eslint-loader": "^1.1.0",
+    "eslint-plugin-react": "^3.6.3",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.0.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-open": "^1.0.0",
+    "gulp-util": "^3.0.7",
+    "istanbul": "^0.3.22",
+    "istanbul-instrumenter-loader": "^0.1.3",
+    "karma": "^0.13.14",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-coverage": "^0.5.3",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-mocha": "^0.2.0",
+    "karma-sourcemap-loader": "^0.3.6",
+    "karma-spec-reporter": "0.0.22",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.3.3",
+    "node-libs-browser": "^0.5.3",
+    "react": "^0.14.7",
+    "react-addons-test-utils": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-hot-loader": "^1.3.0",
+    "rimraf": "^2.4.4",
+    "sinon": "github:ubervu/Sinon.JS",
+    "sinon-chai": "^2.8.0",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "bc5f562b950027a3d7deebe94cb864e566b7950d",
+    "tarball": "https://registry.npmjs.org/react-treebeard/-/react-treebeard-1.1.4.tgz"
+  },
+  "gitHead": "3046fc01edefb1b0806fa66d71ae5a761fdcf2b5",
+  "homepage": "https://github.com/alexcurtis/react-treebeard#readme",
+  "keywords": [
+    "customisable",
+    "data-driven",
+    "fast",
+    "react",
+    "treeview"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "alexcurtis",
+      "email": "alx.curtis@gmail.com"
+    }
+  ],
+  "name": "react-treebeard",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "react": "^0.14 || ^15.0",
+    "react-dom": "^0.14 || ^15.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexcurtis/react-treebeard.git"
+  },
+  "scripts": {
+    "babel": "rimraf lib && babel src/ -d lib/",
+    "example": "webpack-dev-server --content-base ./example/ --config ./example/webpack.config.js",
+    "lib": "npm run babel",
+    "prepublish": "npm run lib",
+    "test": "karma start karma.conf.js",
+    "test-travis": "./node_modules/karma/bin/karma start --browsers Firefox --single-run"
+  },
+  "version": "1.1.4"
+}

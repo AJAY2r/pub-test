@@ -13,7 +13,8 @@ Loading.propTypes = {
 };
 
 const Toggle = ({props}) => {
-    const {style, node} = props;
+    const style = props.style;
+    const node = props.node;
     const {height, width} = style;
     const midHeight = height * 0.5;
     const svgDisplay = node.hideArrow ? 'none' : '';

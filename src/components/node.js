@@ -109,14 +109,15 @@ class TreeNode extends React.Component {
     }
 
     renderHeader(decorators, animations) {
-        const {node, style} = this.props;
+        const {node, style, svgToggle} = this.props;
 
         return (
             <NodeHeader animations={animations}
                         decorators={decorators}
                         node={Object.assign({}, node)}
                         onClick={this.onClick}
-                        style={style}/>
+                        style={style}
+                        svgToggle={svgToggle} />
         );
     }
 
@@ -144,7 +145,8 @@ class TreeNode extends React.Component {
                                                           enableCheckbox={this.props.enableCheckbox}
                                                           checkboxField={this.props.checkboxField}
                                                           handleCheckbox={this.props.handleCheckbox}
-                                                          checkedOptions={this.props.checkedOptions} />
+                                                          checkedOptions={this.props.checkedOptions}
+                                                          svgToggle={this.props.svgToggle} />
                 )}
             </ul>
         );

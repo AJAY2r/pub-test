@@ -30,7 +30,8 @@ class TreeBeard extends React.Component {
                               enableCheckbox={this.props.enableCheckbox}
                               checkboxField={this.props.checkboxField}
                               handleCheckbox={this.props.handleCheckbox}
-                              checkedOptions={this.props.checkedOptions} />
+                              checkedOptions={this.props.checkedOptions}
+                              svgToggle={this.props.svgToggle} />
                 )}
             </ul>
         );
@@ -52,7 +53,8 @@ TreeBeard.propTypes = {
     enableCheckbox: PropTypes.bool,
     checkboxField: PropTypes.string,
     checkedOptions: PropTypes.array,
-    handleCheckbox: PropTypes.func
+    handleCheckbox: PropTypes.func,
+    svgToggle: PropTypes.bool
 };
 
 TreeBeard.defaultProps = {
@@ -61,7 +63,8 @@ TreeBeard.defaultProps = {
     decorators: defaultDecorators,
     enableCheckbox: false,
     checkboxField: 'name',
-    checkedOptions: []
+    checkedOptions: [],
+    svgToggle: false
 };
 
 export default TreeBeard;

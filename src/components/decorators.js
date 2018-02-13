@@ -13,8 +13,8 @@ Loading.propTypes = {
 };
 
 const Toggle = ({props}) => {
-    const style = props.style;
-    const node = props.node;
+    const { style, node, svgToggle } = props;
+    const onClick = svgToggle ? props.onClick : '';
     const {height, width} = style;
     const midHeight = height * 0.5;
     const svgDisplay = node.hideArrow ? 'none' : '';
@@ -22,7 +22,7 @@ const Toggle = ({props}) => {
     var points = '0.59 10.6464 5.17 6.24 0.59 1.8336 2 0.48 8 6.24 2 12';
 
     return (
-        <div style={style.base}>
+        <div style={style.base} onClick={onClick}>
             <div style={style.wrapper}>
                 <svg height={height} width={width} display={svgDisplay}>
                     <polygon points={points}
@@ -54,9 +54,8 @@ Header.propTypes = {
 class Container extends React.Component {
     render() {
         const {style, decorators, terminal, onClick, node} = this.props;
-
         return (
-            <div onClick={onClick}
+            <div onClick={!this.props.svgToggle ? onClick: ''}
                  ref={ref => this.clickableRef = ref}
                  style={style.container}>
                 {!terminal ? this.renderToggle() : null}
@@ -84,9 +83,14 @@ class Container extends React.Component {
     }
 
     renderToggleDecorator() {
-        const {style, decorators, node} = this.props;
-
-        return <decorators.Toggle style={style.toggle} node={node} />;
+        const {style, decorators, node, svgToggle, onClick} = this.props;
+        const params = {
+            style: style.toggle,
+            node: node,
+            svgToggle: svgToggle,
+            onClick: onClick,
+        }
+        return <decorators.Toggle props={params} />;
     }
 }
 Container.propTypes = {

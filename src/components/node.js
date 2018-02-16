@@ -79,6 +79,7 @@ class TreeNode extends React.Component {
         const {style} = this.props;
         const decorators = this.decorators();
         const animations = this.animations();
+        const chkChecked = _.includes(this.props.checkedOptions, this.props.node[this.props.checkboxField]) || false;
         const liClassTmp = chkChecked && this.props.fillSelectedNode ? 'selected' : '';
 
         return (

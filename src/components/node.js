@@ -79,9 +79,11 @@ class TreeNode extends React.Component {
         const {style} = this.props;
         const decorators = this.decorators();
         const animations = this.animations();
-        
+        const liClassTmp = chkChecked && this.props.fillSelectedNode ? 'selected' : '';
+
         return (
             <li ref={ref => this.topLevelRef = ref}
+                className={liClassTmp}
                 style={style.base}>
                 {this.renderHeader(decorators, animations)}
                 {this.renderCheckbox()}
@@ -109,7 +111,7 @@ class TreeNode extends React.Component {
     }
 
     renderHeader(decorators, animations) {
-        const {node, style, svgToggle} = this.props;
+        const {node, style, svgToggle, fillSelectedNode} = this.props;
 
         return (
             <NodeHeader animations={animations}
@@ -117,7 +119,9 @@ class TreeNode extends React.Component {
                         node={Object.assign({}, node)}
                         onClick={this.onClick}
                         style={style}
-                        svgToggle={svgToggle} />
+                        svgToggle={svgToggle}
+                        checkedOptions={this.props.checkedOptions}
+                        checkboxField={this.props.checkboxField} />
         );
     }
 
@@ -146,7 +150,8 @@ class TreeNode extends React.Component {
                                                           checkboxField={this.props.checkboxField}
                                                           handleCheckbox={this.props.handleCheckbox}
                                                           checkedOptions={this.props.checkedOptions}
-                                                          svgToggle={this.props.svgToggle} />
+                                                          svgToggle={this.props.svgToggle}
+                                                          fillSelectedNode={this.props.fillSelectedNode} />
                 )}
             </ul>
         );

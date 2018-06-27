@@ -32,7 +32,9 @@ class TreeBeard extends React.Component {
                               handleCheckbox={this.props.handleCheckbox}
                               checkedOptions={this.props.checkedOptions}
                               svgToggle={this.props.svgToggle}
-                              fillSelectedNode={this.props.fillSelectedNode} />
+                              fillSelectedNode={this.props.fillSelectedNode}
+                              nodeCheckedOptions={this.props.nodeCheckedOptions}
+                              nodeSelectionField={this.props.nodeSelectionField} />
                 )}
             </ul>
         );

@@ -63,6 +63,9 @@ class TreeNode extends React.Component {
             }
             if (this.props.node.disableCheckbox) {
                 className = 'fa fa-square-o-disable decomposition-item-checkbox';
+                if (chkChecked) {
+                    className = 'fa fa-square-check-disable decomposition-item-checkbox';
+                }
                 checkboxElement =  (
                     <span className={className} value={this.props.node[this.props.checkboxField]} />
                 );

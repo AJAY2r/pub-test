@@ -29,7 +29,11 @@ class NodeHeader extends React.Component {
         const {animations, decorators, node, onClick, style} = this.props;
         const {active, children} = node;
         const terminal = !children;
-        const container = [style.link, active ? style.activeLink : null];
+        let linkStyle = style.link;
+        if (node.checkboxNotAllowed) {
+            linkStyle = style.linkCheckboxNotAllowed;
+        }
+        const container = [linkStyle, active ? style.activeLink : null];
         const headerStyles = Object.assign({container}, style);
 
         return (

@@ -71,6 +71,7 @@ TreeBeard.defaultProps = {
     checkedOptions: [],
     svgToggle: false,
     fillSelectedNode: false
+    lazyLoadNodeHeight: 'auto',
 };
 
 export default TreeBeard;

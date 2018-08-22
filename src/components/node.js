@@ -165,7 +165,8 @@ class TreeNode extends React.Component {
                                                           handleCheckbox={this.props.handleCheckbox}
                                                           checkedOptions={this.props.checkedOptions}
                                                           svgToggle={this.props.svgToggle}
-                                                          fillSelectedNode={this.props.fillSelectedNode} />
+                                                          fillSelectedNode={this.props.fillSelectedNode}
+                                                          lazyLoadNodeHeight={this.props.lazyLoadNodeHeight} />
                 )}
             </ul>
         );

@@ -35,7 +35,8 @@ class TreeBeard extends React.Component {
                               fillSelectedNode={this.props.fillSelectedNode}
                               nodeCheckedOptions={this.props.nodeCheckedOptions}
                               nodeSelectionField={this.props.nodeSelectionField}
-                              lazyLoadNodeHeight={this.props.lazyLoadNodeHeight} />
+                              lazyLoadNodeHeight={this.props.lazyLoadNodeHeight}
+                              debounce={this.props.debounce} />
                 )}
             </ul>
         );
@@ -71,7 +72,8 @@ TreeBeard.defaultProps = {
     checkedOptions: [],
     svgToggle: false,
     fillSelectedNode: false,
-    lazyLoadNodeHeight: 'auto'
+    lazyLoadNodeHeight: 'auto',
+    debounce: false
 };
 
 export default TreeBeard;

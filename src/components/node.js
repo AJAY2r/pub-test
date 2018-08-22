@@ -91,7 +91,7 @@ class TreeNode extends React.Component {
             tmpHeight = lazyLoadNodeHeight;
         }
         return (
-            <LazyLoad height={tmpHeight}>
+            <LazyLoad height={tmpHeight} debounce={this.props.debounce}>
             <li ref={ref => this.topLevelRef = ref}
                 className={liClassTmp}
                 style={style.base}>
@@ -135,7 +135,8 @@ class TreeNode extends React.Component {
                         checkboxField={this.props.checkboxField}
                         nodeCheckedOptions={this.props.nodeCheckedOptions}
                         nodeSelectionField={this.props.nodeSelectionField}
-                        lazyLoadNodeHeight={this.props.lazyLoadNodeHeight} />
+                        lazyLoadNodeHeight={this.props.lazyLoadNodeHeight}
+                        debounce={this.props.debounce} />
         );
     }
 
@@ -166,7 +167,8 @@ class TreeNode extends React.Component {
                                                           checkedOptions={this.props.checkedOptions}
                                                           svgToggle={this.props.svgToggle}
                                                           fillSelectedNode={this.props.fillSelectedNode}
-                                                          lazyLoadNodeHeight={this.props.lazyLoadNodeHeight} />
+                                                          lazyLoadNodeHeight={this.props.lazyLoadNodeHeight}
+                                                          debounce={this.props.debounce} />
                 )}
             </ul>
         );

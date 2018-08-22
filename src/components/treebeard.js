@@ -70,8 +70,8 @@ TreeBeard.defaultProps = {
     checkboxField: 'name',
     checkedOptions: [],
     svgToggle: false,
-    fillSelectedNode: false
-    lazyLoadNodeHeight: 'auto',
+    fillSelectedNode: false,
+    lazyLoadNodeHeight: 'auto'
 };
 
 export default TreeBeard;

@@ -34,7 +34,8 @@ class TreeBeard extends React.Component {
                               svgToggle={this.props.svgToggle}
                               fillSelectedNode={this.props.fillSelectedNode}
                               nodeCheckedOptions={this.props.nodeCheckedOptions}
-                              nodeSelectionField={this.props.nodeSelectionField} />
+                              nodeSelectionField={this.props.nodeSelectionField}
+                              lazyLoadNodeHeight={this.props.lazyLoadNodeHeight} />
                 )}
             </ul>
         );

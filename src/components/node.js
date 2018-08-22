@@ -3,6 +3,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {VelocityTransitionGroup} from 'velocity-react';
+import LazyLoad from 'react-lazy-load';
 
 import NodeHeader from './header';
 
@@ -84,8 +85,13 @@ class TreeNode extends React.Component {
         const animations = this.animations();
         const nodeChecked = _.includes(this.props.nodeCheckedOptions, this.props.node[this.props.nodeSelectionField]) || false;
         const liClassTmp = nodeChecked && this.props.fillSelectedNode ? 'selected' : '';
-
+        const lazyLoadNodeHeight = this.props.lazyLoadNodeHeight;
+        let tmpHeight = 'auto';
+        if (lazyLoadNodeHeight && (!this.props.node.children || this.props.node.children.length === 0)) {
+            tmpHeight = lazyLoadNodeHeight;
+        }
         return (
+            <LazyLoad height={tmpHeight}>
             <li ref={ref => this.topLevelRef = ref}
                 className={liClassTmp}
                 style={style.base}>
@@ -93,6 +99,7 @@ class TreeNode extends React.Component {
                 {this.renderCheckbox()}
                 {this.renderDrawer(decorators, animations)}
             </li>
+            </LazyLoad>
         );
     }
 
@@ -127,7 +134,8 @@ class TreeNode extends React.Component {
                         checkedOptions={this.props.checkedOptions}
                         checkboxField={this.props.checkboxField}
                         nodeCheckedOptions={this.props.nodeCheckedOptions}
-                        nodeSelectionField={this.props.nodeSelectionField} />
+                        nodeSelectionField={this.props.nodeSelectionField}
+                        lazyLoadNodeHeight={this.props.lazyLoadNodeHeight} />
         );
     }
 

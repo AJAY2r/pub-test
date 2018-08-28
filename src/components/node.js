@@ -90,17 +90,31 @@ class TreeNode extends React.Component {
         if (lazyLoadNodeHeight && (!this.props.node.children || this.props.node.children.length === 0)) {
             tmpHeight = lazyLoadNodeHeight;
         }
-        return (
-            <LazyLoad height={tmpHeight} debounce={this.props.debounce} throttle={this.props.throttle}>
-            <li ref={ref => this.topLevelRef = ref}
-                className={liClassTmp}
-                style={style.base}>
-                {this.renderHeader(decorators, animations)}
-                {this.renderCheckbox()}
-                {this.renderDrawer(decorators, animations)}
-            </li>
-            </LazyLoad>
-        );
+        let data;
+        if (this.props.enableLazyLoading) {
+            data = (
+                <LazyLoad height={tmpHeight} debounce={this.props.debounce} throttle={this.props.throttle}>
+                <li ref={ref => this.topLevelRef = ref}
+                    className={liClassTmp}
+                    style={style.base}>
+                    {this.renderHeader(decorators, animations)}
+                    {this.renderCheckbox()}
+                    {this.renderDrawer(decorators, animations)}
+                </li>
+                </LazyLoad>
+            );
+        } else {
+            data = (
+                <li ref={ref => this.topLevelRef = ref}
+                    className={liClassTmp}
+                    style={style.base}>
+                    {this.renderHeader(decorators, animations)}
+                    {this.renderCheckbox()}
+                    {this.renderDrawer(decorators, animations)}
+                </li>
+            );
+        }
+        return data;
     }
 
     renderDrawer(decorators, animations) {
@@ -135,6 +149,7 @@ class TreeNode extends React.Component {
                         checkboxField={this.props.checkboxField}
                         nodeCheckedOptions={this.props.nodeCheckedOptions}
                         nodeSelectionField={this.props.nodeSelectionField}
+                        enableLazyLoading={this.props.enableLazyLoading}
                         lazyLoadNodeHeight={this.props.lazyLoadNodeHeight}
                         debounce={this.props.debounce}
                         throttle={this.props.throttle} />
@@ -168,6 +183,7 @@ class TreeNode extends React.Component {
                                                           checkedOptions={this.props.checkedOptions}
                                                           svgToggle={this.props.svgToggle}
                                                           fillSelectedNode={this.props.fillSelectedNode}
+                                                          enableLazyLoading={this.props.enableLazyLoading}
                                                           lazyLoadNodeHeight={this.props.lazyLoadNodeHeight}
                                                           debounce={this.props.debounce}
                                                           throttle={this.props.throttle} />

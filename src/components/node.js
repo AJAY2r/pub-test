@@ -183,6 +183,8 @@ class TreeNode extends React.Component {
                                                           checkedOptions={this.props.checkedOptions}
                                                           svgToggle={this.props.svgToggle}
                                                           fillSelectedNode={this.props.fillSelectedNode}
+                                                          nodeCheckedOptions={this.props.nodeCheckedOptions}
+                                                          nodeSelectionField={this.props.nodeSelectionField}
                                                           enableLazyLoading={this.props.enableLazyLoading}
                                                           lazyLoadNodeHeight={this.props.lazyLoadNodeHeight}
                                                           debounce={this.props.debounce}

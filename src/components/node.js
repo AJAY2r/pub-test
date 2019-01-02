@@ -90,13 +90,17 @@ class TreeNode extends React.Component {
         if (lazyLoadNodeHeight && (!this.props.node.children || this.props.node.children.length === 0)) {
             tmpHeight = lazyLoadNodeHeight;
         }
+        const styleBase = _.cloneDeep(style.base);
+        if (this.props.node.nodeHide) {
+            styleBase.display = 'none';
+        }
         let data;
         if (this.props.enableLazyLoading) {
             data = (
                 <LazyLoad height={tmpHeight} debounce={this.props.debounce} throttle={this.props.throttle}>
                 <li ref={ref => this.topLevelRef = ref}
                     className={liClassTmp}
-                    style={style.base}>
+                    style={styleBase}>
                     {this.renderHeader(decorators, animations)}
                     {this.renderCheckbox()}
                     {this.renderDrawer(decorators, animations)}
@@ -107,7 +111,7 @@ class TreeNode extends React.Component {
             data = (
                 <li ref={ref => this.topLevelRef = ref}
                     className={liClassTmp}
-                    style={style.base}>
+                    style={styleBase}>
                     {this.renderHeader(decorators, animations)}
                     {this.renderCheckbox()}
                     {this.renderDrawer(decorators, animations)}

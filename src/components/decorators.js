@@ -18,11 +18,16 @@ const Toggle = ({props}) => {
     const {height, width} = style;
     const midHeight = height * 0.5;
     const svgDisplay = node.hideArrow ? 'none' : '';
+    const baseStyle = style.base;
+    baseStyle.cursor = 'pointer';
+    if (node.arrowCursor) {
+        baseStyle.cursor = node.arrowCursor;
+    }
     // const points = `0,0 0,${height} ${width},${midHeight}`;
     var points = '0.59 10.6464 5.17 6.24 0.59 1.8336 2 0.48 8 6.24 2 12';
 
     return (
-        <div style={style.base} onClick={onClick}>
+        <div style={baseStyle} onClick={onClick}>
             <div style={style.wrapper}>
                 <svg height={height} width={width} display={svgDisplay}>
                     <polygon points={points}

@@ -43,7 +43,8 @@ class NodeHeader extends React.Component {
                                   onClick={onClick}
                                   style={headerStyles}
                                   terminal={terminal}
-                                  svgToggle={this.props.svgToggle} />
+                                  svgToggle={this.props.svgToggle}
+                                  indexChildren={this.props.indexChildren} />
         );
     }
 }

@@ -66,7 +66,8 @@ class Container extends React.Component {
                 {!terminal ? this.renderToggle() : null}
 
                 <decorators.Header node={node}
-                                   style={style.header}/>
+                                   style={style.header}
+                                   indexChildren={this.props.indexChildren} />
             </div>
         );
     }

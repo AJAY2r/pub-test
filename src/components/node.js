@@ -156,7 +156,8 @@ class TreeNode extends React.Component {
                         enableLazyLoading={this.props.enableLazyLoading}
                         lazyLoadNodeHeight={this.props.lazyLoadNodeHeight}
                         debounce={this.props.debounce}
-                        throttle={this.props.throttle} />
+                        throttle={this.props.throttle}
+                        indexChildren={this.props.indexChildren} />
         );
     }
 
@@ -192,7 +193,8 @@ class TreeNode extends React.Component {
                                                           enableLazyLoading={this.props.enableLazyLoading}
                                                           lazyLoadNodeHeight={this.props.lazyLoadNodeHeight}
                                                           debounce={this.props.debounce}
-                                                          throttle={this.props.throttle} />
+                                                          throttle={this.props.throttle}
+                                                          indexChildren={index} />
                 )}
             </ul>
         );

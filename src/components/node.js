@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {VelocityTransitionGroup} from 'velocity-react';
 import LazyLoad from 'react-lazy-load';
+import _ from 'lodash';
 
 import NodeHeader from './header';
 
